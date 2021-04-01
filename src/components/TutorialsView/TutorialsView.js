@@ -1,29 +1,15 @@
-import { useEffect, useState } from "react";
-import { getTutorials } from "../../services/apiService";
-
 // Custom components
 import TutorialList from "../TutorialList";
+import { useAppContext } from "../../App";
 
 const TutorialsView = () => {
-  const [tutorials, setTutorials] = useState([]);
-  const [ready, setReady] = useState(false);
-
-  const fetchTutorials = () => {
-    getTutorials()
-      .then((tutorials) => {
-        setTutorials(tutorials);
-      })
-      .then(() => setReady(true));
-  };
-
-  // Call API on component mount
-  useEffect(() => {
-    fetchTutorials();
-  }, []);
+  const { tutorials, fetchTutorials } = useAppContext();
 
   return (
     <div>
-      {ready ? <TutorialList tutorials={tutorials} /> : <div>Loading...</div>}
+      <h1>Video Tutorials Viewer</h1>
+      <button onClick={fetchTutorials}>Refesh latest tutorials</button>
+      <TutorialList tutorials={tutorials} />
     </div>
   );
 };
