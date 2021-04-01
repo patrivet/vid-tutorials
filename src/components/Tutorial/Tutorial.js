@@ -1,5 +1,5 @@
-const Tutorial = () => {
-  return <></>;
+const Tutorial = ({ tutorial }) => {
+  return <div>tutorial</div>;
 };
 
 export default Tutorial;

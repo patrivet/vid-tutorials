@@ -16,7 +16,7 @@ bin-release/
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# information for Eclipse / Flash Builder.:
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
