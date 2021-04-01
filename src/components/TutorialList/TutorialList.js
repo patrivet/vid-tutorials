@@ -1,6 +1,9 @@
 import Tutorial from "../Tutorial";
+import { useAppContext } from "../../App";
 
-const TutorialList = ({ tutorials }) => {
+const TutorialList = () => {
+  const { tutorials } = useAppContext();
+
   return (
     <div>
       {tutorials.map((tutorial) => {

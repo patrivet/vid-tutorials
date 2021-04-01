@@ -32,7 +32,7 @@ export const getTopRatedTutorialsForTags = (
  * @param {string} searchTerm
  * @return {array of tutorial objects}
  */
-export const searchForTutorial = (tutorials, searchTerm) => {
+export const searchForTutorials = (tutorials, searchTerm) => {
   let result = [];
   const searchTerms = searchTerm.toLowerCase().split(" ");
   const numSearchTerms = searchTerms.length;
