@@ -47,3 +47,15 @@ export const searchForTutorials = (tutorials, searchTerm) => {
   }
   return result;
 };
+
+/**
+ * @param {array of tutorial objects} tutorials
+ * @return {array of distinct tags}
+ */
+export const getDistinctTags = (tutorials) => {
+  let all = [];
+  tutorials.forEach((tutorial) => {
+    all.push(...tutorial.tags);
+  });
+  return [...new Set([...all])];
+};

@@ -3,7 +3,6 @@ import "./App.css";
 
 // Custom components
 import * as apiService from "./services/apiService";
-
 import TutorialsView from "./components/TutorialsView";
 
 // App Context setup
