@@ -5,13 +5,13 @@ import { useAppContext } from "../../App";
 import { searchForTutorials } from "../../utils/helperFunctions";
 
 const TutorialSearch = () => {
-  const { tutorials, setTutorials } = useAppContext();
+  const { tutorials, setTutorialsAfterSearch } = useAppContext();
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const tutorialsFromSearch = searchForTutorials(tutorials, searchTerm);
-    setTutorials(tutorialsFromSearch);
+    setTutorialsAfterSearch(tutorialsFromSearch);
   };
 
   const handleChange = (event) => {
