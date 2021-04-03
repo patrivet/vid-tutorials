@@ -1,0 +1,4 @@
+.filter__checkbox > input[type="checkbox"],
+label {
+  cursor: pointer;
+}
