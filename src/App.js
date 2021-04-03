@@ -33,10 +33,8 @@ function App() {
 
   // Gather list of distinct tags across all tutorials.
   useEffect(() => {
-    if (!distinctTags) {
-      const distinctTags = getDistinctTags(tutorials);
-      setDistinctTags(distinctTags);
-    }
+    const distinctTags = getDistinctTags(tutorials);
+    setDistinctTags(distinctTags);
   }, [tutorials]);
 
   // Define context

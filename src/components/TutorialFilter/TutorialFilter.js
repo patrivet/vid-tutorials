@@ -3,15 +3,11 @@ import { useAppContext } from "../../App";
 import "./TutorialFilter.css";
 
 // Custom components
-import {
-  getTopRatedTutorialsForTags,
-  getDistinctTags,
-} from "../../utils/helperFunctions";
+import { getTopRatedTutorialsForTags } from "../../utils/helperFunctions";
 
 const TutorialFilter = () => {
-  const { tutorials, setTutorialsAfterFilter } = useAppContext();
+  const { tutorials, setTutorialsAfterFilter, distinctTags } = useAppContext();
   const [userTags, setUserTags] = useState([]);
-  const allTags = getDistinctTags(tutorials);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -51,7 +47,7 @@ const TutorialFilter = () => {
     <div className="filter">
       <p className="filter__text">Filter tutorials (Select one or more tags)</p>
       <form onSubmit={handleSubmit}>
-        {allTags.map((tag) => {
+        {distinctTags.map((tag) => {
           return (
             <div className="filter__checkbox" key={tag}>
               <input
