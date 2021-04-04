@@ -32,7 +32,7 @@ const TutorialFilter = () => {
   };
 
   const clearFilters = () => {
-    //
+    // Reset state to null.
     setTutorialsAfterFilter(null);
     // clear the fields;
     let checkboxes = document.getElementsByTagName("input");

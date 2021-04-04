@@ -18,12 +18,21 @@ const TutorialSearch = () => {
     setSearchTerm(event.target.value);
   };
 
+  const resetSearch = () => {
+    // Reset state to null.
+    setTutorialsAfterSearch(null);
+    // clear the fields;
+    let searchInput = document.getElementById("search__input");
+    if (searchInput) searchInput.value = "";
+  };
+
   return (
     <div className="search">
       <p className="search__text">Search tutorials by title:</p>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
+          id="search__input"
           className="search__input"
           placeholder="Enter search term(s)"
           onChange={handleChange}
@@ -32,6 +41,9 @@ const TutorialSearch = () => {
           Search
         </button>
       </form>
+      <button type="submit" width="auto" onClick={resetSearch}>
+        Clear Search
+      </button>
     </div>
   );
 };
