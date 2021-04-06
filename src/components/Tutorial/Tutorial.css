@@ -1,4 +1,20 @@
 .tutorial {
   border-radius: 5px;
   border: 1px solid black;
+  padding: 15px 55px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background-color: navy;
+  color: white;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 2px;
+  padding: 4px;
+}
+
+.tutorial__tags {
+  display: inline-block;
+  padding-right: 5px;
 }

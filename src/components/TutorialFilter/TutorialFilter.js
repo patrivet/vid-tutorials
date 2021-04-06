@@ -52,7 +52,9 @@ const TutorialFilter = () => {
 
   return (
     <div className="filter">
-      <p className="filter__text">Filter tutorials (Select one or more tags)</p>
+      <p className="filter__text">
+        <strong>Filter tutorials (Select one or more tags)</strong>
+      </p>
       <form onSubmit={handleSubmit}>
         {distinctTags.map((tag) => {
           return (

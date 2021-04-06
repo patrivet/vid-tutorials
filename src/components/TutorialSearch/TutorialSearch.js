@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useAppContext } from "../../App";
+import "./TutorialSearch.css";
 
 // Custom components
 import { searchForTutorials } from "../../utils/helperFunctions";
@@ -28,7 +29,9 @@ const TutorialSearch = () => {
 
   return (
     <div className="search">
-      <p className="search__text">Search tutorials by title:</p>
+      <p className="search__text">
+        <strong>Search tutorials by title:</strong>
+      </p>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

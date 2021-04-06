@@ -19,8 +19,14 @@ const Tutorial = ({ tutorial }) => {
       </p>
       <p className="tutorial__tags">
         <strong>Tags: </strong>
-        {tutorial.tags.toString()}
       </p>
+      {tutorial.tags.map((tag) => {
+        return (
+          <div key={tag} className="tag">
+            {tag}
+          </div>
+        );
+      })}
     </div>
   );
 };

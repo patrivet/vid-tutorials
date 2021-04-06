@@ -31,7 +31,7 @@ const TutorialsView = () => {
   return (
     <div>
       <h1>Video Tutorials Viewer</h1>
-      <button onClick={fetchTutorials}>Refesh latest tutorials</button>
+      <button onClick={fetchTutorials}>Refresh latest tutorials</button>
       <TutorialSearch />
       <TutorialFilter />
       <h4>Showing {tutorialsToUse.length} Tutorials:-</h4>
