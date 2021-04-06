@@ -11,6 +11,9 @@ const TutorialFilter = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    // Do nothing if no tags selected
+    if (!userTags.length) return;
+
     const tutorialsFiltered = getTopRatedTutorialsForTags(
       tutorials,
       userTags,
@@ -19,9 +22,8 @@ const TutorialFilter = () => {
     setTutorialsAfterFilter(tutorialsFiltered);
   };
 
-  const handleChange = (event) => {
+  const updateTags = (inputTag) => {
     // Add or remove checked/unchecked tag.
-    const inputTag = event.target.value;
     if (userTags.includes(inputTag)) {
       setUserTags(userTags.filter((tagMember) => tagMember !== inputTag));
     } else {
@@ -36,9 +38,14 @@ const TutorialFilter = () => {
     setTutorialsAfterFilter(null);
     // clear the fields;
     let checkboxes = document.getElementsByTagName("input");
+
     for (var i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i].type === "checkbox") {
-        checkboxes[i].checked = false;
+        if (checkboxes[i].checked === true) {
+          // remove from tags Array
+          updateTags(checkboxes[i].name);
+          checkboxes[i].checked = false;
+        }
       }
     }
   };
@@ -55,7 +62,9 @@ const TutorialFilter = () => {
                 id={tag}
                 name={tag}
                 value={tag}
-                onChange={handleChange}
+                onChange={(event) => {
+                  updateTags(event.target.value);
+                }}
               />
               <label htmlFor={tag}>{tag}</label>
             </div>
