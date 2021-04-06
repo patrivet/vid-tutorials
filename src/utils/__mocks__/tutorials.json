@@ -1,0 +1,42 @@
+[
+  {
+    "videoTitle": "Learn: Places",
+    "tags": [
+        "Medium"
+    ],
+    "averageUserRating": 0.5347414366393164
+  },
+  {
+    "videoTitle": "Activity: Home",
+    "tags": [
+        "Hard",
+        "Interactive"
+    ],
+    "averageUserRating": 0.4970201282853075
+  },
+  {
+    "videoTitle": "Learn: Work",
+    "tags": [
+        "Interactive",
+        "Passive",
+        "Calming"
+    ],
+    "averageUserRating": 0.3490546479057728
+  },
+  {
+    "videoTitle": "Learn: School",
+    "tags": [
+        "Exploring"
+    ],
+    "averageUserRating": 0.5190766417899317
+  },
+  {
+    "videoTitle": "Activity: Animals",
+    "tags": [
+        "Exploring",
+        "Energetic",
+        "Hard"
+    ],
+    "averageUserRating": 0.9410138034340467
+  }
+]

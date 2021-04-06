@@ -5,11 +5,12 @@
  * @return {array of tutorial objects} maximum of 20 returned.
  */
 export const getTopRatedTutorialsForTags = (
-  tutorials,
-  tagsToMatch,
-  numMatches
+  tutorials = [],
+  tagsToMatch = [],
+  numMatches = 0
 ) => {
   let result = [];
+
   // The sort or entire function could be memorized ?
   tutorials.sort((a, b) => b.averageUserRating - a.averageUserRating);
 
@@ -32,7 +33,7 @@ export const getTopRatedTutorialsForTags = (
  * @param {string} searchTerm
  * @return {array of tutorial objects}
  */
-export const searchForTutorials = (tutorials, searchTerm) => {
+export const searchForTutorials = (tutorials = [], searchTerm = "") => {
   let result = [];
   const searchTerms = searchTerm.toLowerCase().split(" ");
   const numSearchTerms = searchTerms.length;
